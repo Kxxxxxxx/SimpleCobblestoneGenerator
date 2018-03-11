@@ -1,0 +1,16 @@
+[
+{
+  "modid": "simplecobblegen",
+  "name": "Simple Cobblestone Generator",
+  "description": "Simple Cobblestone Generators mod.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "https://github.com/Kxxxxxxx/SimpleCobblestoneGenerator",
+  "updateUrl": "",
+  "authorList": ["Kx"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
