@@ -1,3 +1,17 @@
+The files 
+ -block_generator_basic_tier3.png 
+ -block_generator_window_tier3.png
+ -block_generator_basic_tier4.png
+ -block_generator_window_tier4.png
+ -block_generator_output.png
+are based on the files
+ -block_electrum.png by CoFH, https://github.com/CoFH/ThermalFoundation
+ -block_signalum.png by CoFH, https://github.com/CoFH/ThermalFoundation
+ -config_orange.png by CoFH, https://github.com/CoFH/ThermalExpansion
+ 
+and therefore are released under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0), a summary of which can be found at: https://creativecommons.org/licenses/by-nc-sa/4.0/
+All other files are licensed under the terms below:
+
 MIT License
 
 Copyright (c) 2018 Kxxxxxxx
