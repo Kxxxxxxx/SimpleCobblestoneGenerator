@@ -1,0 +1,33 @@
+{
+    "parent": "block/block",
+    "elements": [
+        {   "from": [ 0, 0, 0 ],
+            "to": [ 16, 16, 16 ],
+            "faces": {
+                "down":  { "texture": "#basic", 	"cullface": "down" },
+                "up":    { "texture": "#basic", 	"cullface": "up" },
+                "north": { "texture": "#material", 	"cullface": "north" },
+                "south": { "texture": "#material", 	"cullface": "south" },
+                "west":  { "texture": "#water", 	"cullface": "west" },
+                "east":  { "texture": "#lava", 		"cullface": "east" }
+            }
+        },
+		{   "from": [ 0, 0, 0 ],
+            "to": [ 16, 16, 16 ],
+            "faces": {
+                "north": { "texture": "#window", "cullface": "north" },
+                "south": { "texture": "#window", "cullface": "south" },
+                "west":  { "texture": "#window", "cullface": "west" },
+                "east":  { "texture": "#window", "cullface": "east" }
+            }
+        }
+    ],
+    "textures": {
+        "particle": "simplecobblegen:blocks/block_generator_basic_tier2",
+        "basic": 	"simplecobblegen:blocks/block_generator_basic_tier2",
+        "window": 	"simplecobblegen:blocks/block_generator_window_tier2",
+        "lava": 	"blocks/lava_still",
+        "water": 	"blocks/water_still",
+        "material": "blocks/stone"
+    }
+}
