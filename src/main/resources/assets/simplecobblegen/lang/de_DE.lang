@@ -1,0 +1,46 @@
+#Blocks
+tile.simplecobblegen:generator_cobble_tier_1.name=Bruchstein Generator
+tile.simplecobblegen:generator_cobble_tier_2.name=Bruchstein Generator Stufe 2
+tile.simplecobblegen:generator_cobble_tier_3.name=Bruchstein Generator Stufe 3
+tile.simplecobblegen:generator_cobble_tier_4.name=Bruchstein Generator Stufe 4
+tile.simplecobblegen:generator_stone_tier_1.name=Stein Generator
+tile.simplecobblegen:generator_Stein_tier_2.name=Stein Generator Stufe 2
+tile.simplecobblegen:generator_stone_tier_3.name=Stein Generator Stufe 3
+tile.simplecobblegen:generator_stone_tier_4.name=Stein Generator Stufe 4
+tile.simplecobblegen:generator_cobble_push_tier_1.name=Bruchstein Generator (Auto-Output)
+tile.simplecobblegen:generator_cobble_push_tier_2.name=Bruchstein Generator Stufe 2 (Auto-Output)
+tile.simplecobblegen:generator_cobble_push_tier_3.name=Bruchstein Generator Stufe 3 (Auto-Output)
+tile.simplecobblegen:generator_cobble_push_tier_4.name=Bruchstein Generator Stufe 4 (Auto-Output)
+tile.simplecobblegen:generator_stone_push_tier_1.name=Stein Generator (Auto-Output)
+tile.simplecobblegen:generator_stone_push_tier_2.name=Stein Generator Stufe 2 (Auto-Output)
+tile.simplecobblegen:generator_stone_push_tier_3.name=Stein Generator Stufe 3 (Auto-Output)
+tile.simplecobblegen:generator_stone_push_tier_4.name=Stein Generator Stufe 4 (Auto-Output)
+#Tooltips
+simplecobblegen.tooltip.generator_1=Interner Speicher: %d %s
+simplecobblegen.tooltip.generator_2=Produziert %d %s alle %d Ticks.
+simplecobblegen.tooltip.generator_3=Gibt Blöcke an einen Behälter oberhalb des Generators ab!
+#Creative Tabs
+itemGroup.simplecobblegen=Bruchstein Generatoren
+#Config
+simplecobblegen.general.parameter=Prozess Parameter
+simplecobblegen.general.parameter.tooltip=Manipuliere die Prozess parameter für jede Stufe.\n Hat keinen Einfluss auf bereits plazierte Blöcke 
+simplecobblegen.config.slotLimit=Slot-Limit
+simplecobblegen.config.slotLimit.tooltip=Größe des internen Block-Speichers: Slot-Limit * Anzahl der Slots
+simplecobblegen.config.slotNumber=Anzahl der Slots
+simplecobblegen.config.slotNumber.tooltip=Größe des internen Block-Speichers: Slot-Limit * Anzahl der Slots
+simplecobblegen.config.processTime=Prozessdauer
+simplecobblegen.config.processTime.tooltip=Zeit zwischen Zyklen in Ticks
+simplecobblegen.config.productCount=Produktionsanzahl
+simplecobblegen.config.productCount.tooltip=Anzahl der produzierten Blöcke pro Zyklus
+simplecobblegen.config.tier1=Stufe 1
+simplecobblegen.config.tier1.tooltip=Einstellungen zum Generator Stufe 1
+simplecobblegen.config.tier2=Stufe 2
+simplecobblegen.config.tier2.tooltip=Einstellungen zum Generator Stufe 2
+simplecobblegen.config.tier3=Stufe 3
+simplecobblegen.config.tier3.tooltip=Einstellungen zum Generator Stufe 3
+simplecobblegen.config.tier4=Stufe 4
+simplecobblegen.config.tier4.tooltip=Einstellungen zum Generator Stufe 4
+#error messages
+simplecobblegen.message.wrongConfig=Client-Konfiguration ist nicht kompatible mit Server-Konfiguration!
+simplecobblegen.message.wrongConfig.fix.generic=Die Varianten in der Client Config-Datei müssen mit denen der Server Config-Datei übereinstimmen
+simplecobblegen.message.wrongConfig.fix.specific=Die Variante "%s" der "%s" muss auf "%s" gestellt werden
