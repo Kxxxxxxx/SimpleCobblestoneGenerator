@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "normal": {"model": "simplecobblegen:generator_cobble_tier_2"}
+    }
+}

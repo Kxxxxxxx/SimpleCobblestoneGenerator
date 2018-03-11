@@ -1,0 +1,88 @@
+buildscript {
+    repositories {
+        jcenter()
+        maven { url = "http://files.minecraftforge.net/maven" }
+    }
+    dependencies {
+        classpath 'net.minecraftforge.gradle:ForgeGradle:2.3-SNAPSHOT'
+    }
+}
+apply plugin: 'net.minecraftforge.gradle.forge'
+//Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
+
+if(project.mod_version ==~ /\d+\.\d+\.\d+/){
+	ext.versionFile = file "build.version"
+	
+	if(!versionFile.exists()){
+		new File( 'build.version' ).withWriterAppend { w ->
+			w << "mod_version=0\n"
+			w << "mod_patch=0"
+		}
+	}
+	
+	versionFile.withReader {
+		ext.versionProps = new Properties()
+	    versionProps.load(it)
+	    project.ext.build_version = new ConfigSlurper().parse versionProps
+		if(build_version.mod_version.equalsIgnoreCase(project.mod_version)){
+			build_version.mod_patch = (Integer.valueOf(build_version.mod_patch) + 1).toString()
+		}
+		else{
+			build_version.mod_version = project.mod_version
+			build_version.mod_patch = "0"
+		}
+		project.mod_version += "." + build_version.mod_patch
+	}
+}
+
+build.doLast{
+	if(project.hasProperty("versionProps")){
+		versionProps.setProperty('mod_version', build_version.mod_version)
+		versionProps.setProperty('mod_patch', build_version.mod_patch)
+		versionProps.store(versionFile.newWriter(), null)
+	}
+}
+
+group = project.package_group
+archivesBaseName = "${project.mod_name}-${project.mc_version}"
+version = project.mod_version
+
+sourceCompatibility = targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
+compileJava {
+    sourceCompatibility = targetCompatibility = '1.8'
+}
+
+minecraft {
+    version = "${project.mc_version}-${project.forge_version}"
+    runDir = "run"
+    
+    replace "@VERSION@", project.version
+    replace "@MCVERSION@", "[${project.mc_version}]"
+    replaceIn "SimpleCobblestoneGenerator.java"
+    
+    clientRunArgs += "--username=${project.username}"
+	
+    mappings = project.mappings
+    makeObfSourceJar = false
+}
+
+dependencies {
+
+}
+
+processResources {
+    inputs.property "version", project.version
+    inputs.property "mcversion", project.minecraft.version
+
+    from(sourceSets.main.resources.srcDirs) {
+        include '**/*.info'
+        include '**/*.properties'
+
+        expand 'version': project.version, 'mcversion': project.minecraft.version
+    }
+
+    from(sourceSets.main.resources.srcDirs) {
+        exclude '**/*.info'
+        exclude '**/*.properties'
+    }
+}
